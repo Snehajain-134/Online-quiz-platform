@@ -1,0 +1,46 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <h1>QuizMaster</h1>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h2>Test Your Knowledge</h2>
+
+            <p>
+                Play exciting quizzes and compete
+                with friends.
+            </p>
+
+            <a href="/quiz">
+                <button>Start Quiz</button>
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="">
+        </div>
+
+    </section>
+
+</body>
+</html>

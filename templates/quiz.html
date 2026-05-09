@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <h2>Real-Time Quiz</h2>
+
+    <form action="/result" method="POST">
+
+       {% for q in questions %}
+
+<div class="question-box">
+
+    <h3>
+        {{ loop.index }}.
+        {{ q.question|safe }}
+    </h3>
+
+    <div class="options">
+
+        <!-- Correct Answer -->
+        <label class="option-label">
+
+            <input
+            type="radio"
+            name="q{{ loop.index0 }}"
+            value="{{ q.correct_answer }}">
+
+            {{ q.correct_answer }}
+
+        </label>
+
+        <!-- Wrong Answers -->
+        {% for option in q.incorrect_answers %}
+
+        <label class="option-label">
+
+            <input
+            type="radio"
+            name="q{{ loop.index0 }}"
+            value="{{ option }}">
+
+            {{ option }}
+
+        </label>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+        <button
+        type="submit"
+        class="next-btn">
+
+        Submit Quiz
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

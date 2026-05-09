@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4fff3;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav h1{
+    color:#2d6a4f;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.hero-text button{
+    padding:12px 25px;
+    background:#2d6a4f;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.hero-image img{
+    width:400px;
+}
+
+/* Login Page */
+
+.login-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-form{
+    width:350px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.login-form h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.login-form input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+.login-form button{
+    width:100%;
+    padding:12px;
+    background:#2d6a4f;
+    color:white;
+    border:none;
+    margin-top:15px;
+}
+
+/* Quiz Page */
+
+.quiz-container{
+    width:60%;
+    margin:80px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+}
+
+.options{
+    display:grid;
+    gap:15px;
+    margin-top:20px;
+}
+
+.options button{
+    padding:15px;
+    border:none;
+    background:#d8f3dc;
+    cursor:pointer;
+}
+
+.next-btn{
+    margin-top:25px;
+    padding:12px 20px;
+    background:#2d6a4f;
+    color:white;
+    border:none;
+}
+
+/* Result Page */
+
+.result-container{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.result-container button{
+    padding:12px 25px;
+    margin-top:20px;
+    background:#2d6a4f;
+    color:white;
+    border:none;
+}
